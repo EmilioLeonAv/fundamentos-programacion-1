@@ -6,7 +6,6 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
 
         int unidades = 100;
-        final int CAP_MAX = 250;
 
         int recepcionesExitosas = 0;
         int retirosExitosos = 0;
@@ -37,7 +36,7 @@ public class Main {
                         }
                     } while (uniRec <= 0);
 
-                    if (unidades + uniRec > CAP_MAX) {
+                    if (unidades + uniRec > 250) {
                         System.out.println("Capacidad excedida");
                         operacionesRechazadas++;
                     } else {
@@ -97,7 +96,5 @@ public class Main {
             }
 
         } while (opc != 4);
-
-        teclado.close();
     }
 }
